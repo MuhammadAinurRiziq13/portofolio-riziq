@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en" class="scroll-smooth light transition-colors duration-500 ease-in-out delay-200">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   </head>
   <body class="overflow-x-hidden">
     <!-- Header section -->
-    <header class="bg-[rgba(255,255,255,0.2)] absolute top-0 left-0 w-full flex items-center z-10 lg:px-28">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 lg:px-28">
       <div class="container mx-auto">
         <div class="flex items-center justify-between relative">
           <div class="px-5">
@@ -28,22 +28,37 @@
               <span class="hamburger-line origin-bottom-left transition duration-300"></span>
             </button>
 
-            <nav id="nav-menu" class="nav-menu absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <nav
+              id="nav-menu"
+              class="nav-menu absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-700 lg:dark:bg-transparent"
+            >
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About</a>
                 </li>
                 <li class="group">
-                  <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                  <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portofolio</a>
                 </li>
                 <li class="group">
-                  <a href="#tech-stack" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tech Stack</a>
+                  <a href="#tech-stack" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Tech Stack</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-dark dark:text-white">light</span>
+                    <input type="checkbox" name="" id="dark-toggle" class="hidden" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1 dark:bg-white">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white dark:bg-slate-500 transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-dark dark:text-white">dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -53,12 +68,12 @@
     </header>
 
     <!-- hero section -->
-    <section id="home" class="pt-28 lg:px-28">
+    <section id="home" class="pt-28 lg:px-28 dark:bg-dark h-lvh">
       <div class="container mx-auto">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-5 lg:w-1/2" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300">
             <h4 class="md:mb-3 text-base font-semibold text-primary md:text-xl">Hello Everyone, I am</h4>
-            <h1 id="typing-text" class="inline font-bold text-dark text-3xl lg:text-5xl leading-loose overflow-hidden border-r-2 border-slate-500 pr-2 whitespace-no-wrap"></h1>
+            <h1 id="typing-text" class="inline font-bold text-dark text-3xl lg:text-5xl leading-loose overflow-hidden border-r-2 border-slate-500 pr-2 whitespace-no-wrap dark:text-white"></h1>
             <h2 class="md:mt-3 font-medium text-secondary text-lg mb-5 lg:text-2xl">Student & Web Developer</h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore iure nemo praesentium expedita placeat qui repudiandae voluptate magni facilis dicta.</p>
 
@@ -66,8 +81,8 @@
           </div>
           <div class="w-full self-end lg:w-1/2" data-aos="fade-left" data-aos-duration="700" data-aos-delay="300">
             <div class="mt-10 relative lg:mt-0 lg:-right-10">
-              <img src="src/img/profil.png" alt="profile" class="max-w-full mx-auto sm:w-80 lg:w-96" />
-              <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-110">
+              <img src="src/img/profil.png" alt="profile" class="max-w-full mx-auto sm:w-80 lg:w-96 relative z-10" />
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-110">
                 <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill="#4338CA"
@@ -83,22 +98,22 @@
     </section>
 
     <!-- about section -->
-    <section id="about" class="pt-28 pb-24 lg:px-28">
+    <section id="about" class="pb-24 lg:px-28 dark:bg-dark">
       <div class="container mx-auto">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-up" data-aos-duration="700">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Introduction About Me!</h2>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Introduction About Me</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam quo cumque ea dolore ut facilis dolorem distinctio error consectetur?</p>
           </div>
           <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Connect me</h3>
+            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Connect to me</h3>
             <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolorem ex repellendus accusantium. Repellat neque veniam tenetur quo ut deleniti?</p>
             <div class="flex items-center">
               <!-- ig -->
               <a
                 href="https://www.instagram.com/ainr_riziqz"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700 dark:text-slate-300"
                 ><svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Instagram</title>
                   <path
@@ -106,7 +121,9 @@
                   /></svg
               ></a>
               <!--tt -->
-              <a href="#" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700"
+              <a
+                href="#"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700 dark:text-slate-300"
                 ><svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>TikTok</title>
                   <path
@@ -116,7 +133,7 @@
               <!--ln -->
               <a
                 href="https://www.linkedin.com/in/muhammad-ainur-riziq-551a04293/"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700 dark:text-slate-300"
                 ><svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>LinkedIn</title>
                   <path
@@ -127,7 +144,7 @@
               <a
                 href="https://github.com/MuhammadAinurRiziq13"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700 dark:text-slate-300"
                 ><svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>GitHub</title>
                   <path
@@ -138,7 +155,7 @@
               <a
                 href="https://wa.me/6281998166297"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 ease-in-out text-slate-700 dark:text-slate-300"
                 ><svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>WhatsApp</title>
                   <path
@@ -153,12 +170,12 @@
     </section>
 
     <!-- portofolio section-->
-    <section id="portofolio" class="pt-36 pb-16 bg-slate-100 lg:px-28">
+    <section id="portofolio" class="pt-36 pb-16 bg-slate-100 lg:px-28 dark:bg-dark">
       <div class="container mx-auto">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl">Latest Project</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl dark:text-white">Latest Project</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos inventore pariatur repellendus. Ipsum, veniam deleniti.</p>
           </div>
         </div>
@@ -170,7 +187,7 @@
                 <a href="https://muhammadainurriziq13.github.io/landingpage-aplikasi-ownlibrary/" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Own Library</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Landing Page Own Library</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
           <div class="mb-7 p-4 md:w-1/2 relative" data-aos="fade-up" data-aos-duration="700">
@@ -180,7 +197,7 @@
                 <a href="https://muhammadainurriziq13.github.io/owl-bookshelf/" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Page OWL Bookshelf</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Page OWL Bookshelf</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
           <div class="mb-7 p-4 md:w-1/2 relative" data-aos="fade-up" data-aos-duration="700">
@@ -190,7 +207,7 @@
                 <a href="https://muhammadainurriziq13.github.io/siipstreetwear/" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page SiipStreetwear</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Landing Page SiipStreetwear</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
           <div class="mb-7 p-4 md:w-1/2 relative" data-aos="fade-up" data-aos-duration="700">
@@ -200,7 +217,7 @@
                 <a href="https://muhammadainurriziq13.github.io/wedding-web/" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Wedding Web</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Wedding Web</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
           <div class="mb-7 p-4 md:w-1/2 relative" data-aos="fade-up" data-aos-duration="700">
@@ -210,7 +227,7 @@
                 <a href="https://github.com/MuhammadAinurRiziq13/web-kantin-mvc" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website Canteen With Native PHP</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Website Canteen With Native PHP</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
           <div class="mb-7 p-4 md:w-1/2 relative" data-aos="fade-up" data-aos-duration="700">
@@ -220,7 +237,7 @@
                 <a href="https://github.com/MuhammadAinurRiziq13/RXZ-Blog" target="_blank" class="bg-transparent p-3 rounded-md border-2 border-white text-white">View Page</a>
               </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website Blog With Laravel</h3>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Website Blog With Laravel</h3>
             <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore sint, nemo quaerat voluptatibus numquam distinctio?</p>
           </div>
         </div>
@@ -228,12 +245,12 @@
     </section>
 
     <!-- language section -->
-    <section id="tech-stack" class="pt-36 pb-32 bg-slate-700">
+    <section id="tech-stack" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-300">
       <div class="container mx-auto">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">language mastered</h4>
-            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl">Tech Stacks That I Master</h2>
+            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl dark:text-dark">Tech Stacks That I Master</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos inventore pariatur repellendus. Ipsum, veniam deleniti.</p>
           </div>
         </div>
@@ -266,12 +283,12 @@
     </section>
 
     <!-- contact section -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 dark:bg-dark">
       <div class="container mx-auto">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl">Get In Touch</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl dark:text-white">Get In Touch</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus et voluptatibus perferendis culpa, officiis ex!</p>
           </div>
         </div>
@@ -279,15 +296,15 @@
           <div class="w-full lg:w-3/5 mx-auto">
             <div class="w-full px-4 mb-8" data-aos="fade-up" data-aos-duration="700">
               <label for="nama" class="text-base font-bold text-primary">Nama</label>
-              <input type="text" name="nama" id="nama" class="w-full bg-slate-200 text-dark rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" required />
+              <input type="text" name="nama" id="nama" class="w-full bg-slate-200 text-dark dark:bg-slate-500 dark:text-white rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" required />
             </div>
             <div class="w-full px-4 mb-8" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
               <label for="email" class="text-base font-bold text-primary">Email</label>
-              <input type="email" name="email" id="email" class="w-full bg-slate-200 text-dark rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" required />
+              <input type="email" name="email" id="email" class="w-full bg-slate-200 text-dark rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary dark:bg-slate-500 dark:text-white" required />
             </div>
             <div class="w-full px-4 mb-8" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
               <label for="pesan" class="text-base font-bold text-primary">Message</label>
-              <textarea name="pesan" id="pesan" class="w-full bg-slate-200 text-dark rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32" required></textarea>
+              <textarea name="pesan" id="pesan" class="w-full bg-slate-200 text-dark rounded-md p-3 focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-32 dark:bg-slate-500 dark:text-white" required></textarea>
             </div>
             <div class="w-full px-4" data-aos="fade-up" data-aos-duration="700" data-aos-delay="250">
               <button type="submit" class="btn-submit text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:bg-indigo-600 hover:shadow-indigo-600 transition duration-300 ease-out w-full">Submit</button>
@@ -306,14 +323,27 @@
           </div>
         </form>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="var(--footer-color)"
+          fill-opacity="1"
+          d="M0,256L30,250.7C60,245,120,235,180,224C240,213,300,203,360,208C420,213,480,235,540,224C600,213,660,171,720,170.7C780,171,840,213,900,229.3C960,245,1020,235,1080,240C1140,245,1200,267,1260,261.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+        ></path>
+      </svg>
     </section>
 
     <!-- footer section -->
-    <footer class="bg-dark py-8">
+    <footer class="bg-dark py-8 dark:bg-slate-200 -my-2">
       <div class="container w-full px-4 mx-auto">
-        <p class="text-white text-sm text-center">&copy; Copyright 2024 .MuhAinurRiziq. All Right Reserved.</p>
+        <p class="text-white text-sm text-center dark:text-dark">&copy; Copyright 2024 .MuhAinurRiziq. All Right Reserved.</p>
       </div>
     </footer>
+
+    <!-- back to top -->
+    <a href="#home" class="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-[999] h-12 w-12 bg-primary rounded-full px-4 flex text-white transition duration-500 opacity-0" id="to-top"
+      ><svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" /></svg
+    ></a>
 
     <!-- js prib -->
     <script src="src/script.js"></script>
